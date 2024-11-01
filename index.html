@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qouday: Quotes of the Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="name-container" id="nameContainer">
+            <h2>Welcome to Qouday!</h2>
+            <h3>Get your quote of the day</h3>
+            <input type="text" id="userName" placeholder="Your name" required>
+            <button class="btn" onclick="submitName()">Start</button>
+        </div>
+
+        <div class="category-container" id="categoryContainer" style="display: none;">
+            <h3>Select Quote Category</h3>
+            <button class="btn" onclick="selectCategory('love')">love</button>
+            <button class="btn" onclick="selectCategory('life')">life</button>
+            <button class="btn" onclick="selectCategory('self')">self</button>
+        </div>
+
+        <div class="quote-container" id="quoteContainer">
+            <h2 id="greeting"></h2>
+            <div class="quote" id="quote">Klik tombol di bawah untuk mendapatkan kutipan acak!</div>
+            <div class="author" id="author"></div>
+            <button class="btn" onclick="downloadQuote()">Download</button>
+            <button class="btn" onclick="shareToTwitter()">Share to <img src="xlogo putih.png"></button>
+        </div>
+    </div>
+
+    <canvas id="quoteCanvas" style="display:none;"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
